@@ -1,0 +1,62 @@
+Pending
+===========
+Nil
+
+DONE
+====
+merge the 4 wilderness label encoded columns into 1 columns using target encoding
+merge the 40 soil type label encoded columns into 1 columns using target encoding
+introduce missing values using ~prodna 10%
+handle missing values
+Missing values to be added and use MICE for imputation (no need for package installation)
+Reshape for missing - Instead used idxmax for performance improvement (avoided for loop)
+keep both the versions of the tables to build different models
+Scaling - Do before DBSCAN / pre-processing / just before visualization
+Dont scale target variable - exclude from MinMaxScaler
+Apply mutliple outlier techniques, zscore
+Create data visualisations with the original dataset (not after scaling, without NaNs, after targetencoding)
+targetencoding rather than labelencoding to be used
+Apply mutliple outlier techniques, including DBSCAN/LOF and delete outliers
+correlation - include legends (done, could not demonstrate)
+Visualisations need to include single and multivariate dimensions (refer heartdisease.py file for samples)
+Added reference section item for LOF Outlier theory
+Added reference section item for Z-Score Outlier - Threshold setting theory
+Added reference section item for MICE
+use dython package for chi-squared test for heatmap - refer Visualization Heart Disease.py
+SMOTE Imbalanced or not? - Do SMOTE to balance the imbalanced data, reduce the majority class (4K?), 
+use FacetGrid for multidimensional visualizations - use soiltype, wilderness and both (use hue), include covertype
+BIN the numerical columns - Ref heartdisease.py 
+BIN the categorical columns - Ref heartdisease.py 
+PCA - Choose based on threshold % for the variability of the components (1/3rd of components, explain 90% variance typically - find this out for our data) - Ref heartdisease.py 
+Add feature engineering section - to add/remove features (add after BINning if needed)
+Visualize clusters - KNN(3 or 4 clusters), Dendrogram, DBSCAN (eps=TBD, minpoints=TBD, distance metric=euclidean, mahalanobis), other outliers as in the reference code. Silhoutte analysis - Ref more outlier text (min-max scaler preferred) (instead hopkins was done)
+Use pickle instead of joblib, as that is being used in the web server code sample
+List of algorithms used ... can we optimize? Retain/use as many as possible...
+10% data being used for training... Yes, seems good... increase later it was increased to 40%
+Best model is containing RandomSearchCV return value... needs to contain actual model object
+Some rows/columns of heatmap are blank... Check for null values in predicted columns
+Need to give precedence to recall over accuracy for choosing model
+Do PCA for both Xtest vs Xtrain 
+Include code snippets that generate the diagrams in the report
+Deployment related - Initial version done
+VotingClassifier implemented
+Mid-semester viva inputs from Prof. Raja Vadana - Colab, Pipeline & Ensemble
+
+REFERENCES
+===========
+https://seaborn.pydata.org/generated/seaborn.kdeplot.html#seaborn.kdeplot
+https://seaborn.pydata.org/generated/seaborn.FacetGrid.html#seaborn.FacetGrid
+http://contrib.scikit-learn.org/category_encoders/targetencoder.html
+https://seaborn.pydata.org/generated/seaborn.jointplot.html#seaborn.jointplot
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.hexbin.html
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.kde.html
+pie diagram for soil types
+try plotly as well
+
+NOTES:
+=======
+use line plots only for time-series data - for this project not much use
+tableau is used in the industry - rather than manually doing visualization
+deep understanding of statistics and ability to write packages is key to thrive
+Visualization is "Data story telling" - Ref: Charles Joseph Minard (Napoleans March) on google
+https://thoughtbot.com/blog/analyzing-minards-visualization-of-napoleons-1812-march
