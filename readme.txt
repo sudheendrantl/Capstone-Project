@@ -22,7 +22,6 @@ covtype.info	- Contains information about the original input dataset provided fo
 covtype.ipynb	- Main project code, in Jupyter Notebook format
 covtype.jpg	- Image of Roosevelt National Park
 covtype.py	- Main project code methods exported to Python format
-covtype.zip	- Contains all the project files mentioned in this file
 datasets.png- Image containing a matrix of description of datasets
 ForestCover.py	- A streamlit based Web application to demonstrate features, validate/make predictions
 ForestCoverType-signed.pdf	- Signed off project report! 
