@@ -23,9 +23,12 @@ covtype.ipynb	- Main project code, in Jupyter Notebook format
 covtype.jpg	- Image of Roosevelt National Park
 covtype.py	- Main project code methods exported to Python format
 covtype.zip	- Contains all the project files mentioned in this file
+datasets.png- Image containing a matrix of description of datasets
 ForestCover.py	- A streamlit based Web application to demonstrate features, validate/make predictions
+ForestCoverType-signed.pdf	- Signed off project report! 
 readme.txt	- This file!
 run.bat		- Run this file on ananconda cmd prompt to start GUI application (invokes ForestCover.py)
+todos.txt - Todo tracker that was used during the project
 touch.txt	- Contains Windows Powershell scripts to force set time/datestamp of all files in current dir
 *.cr		- Classification reports for all models evaluated with during the project
 *.sav		- Models files for all trained models. Used during validation/prediction through GUI
